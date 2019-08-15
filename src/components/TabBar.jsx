@@ -16,7 +16,7 @@ const TabBar = () => {
             </NavLink>
           </li>
           <li className="browse">
-            <NavLink to="/browse" className="active">
+            <NavLink to="/browse">
               <img src={SearchIcon} alt="Search Icon" width="35" height="35" />
               <span>Browse</span>
             </NavLink>
