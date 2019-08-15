@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import useGlobal from "../store";
+import BookItem from "./BookItem";
 
 const BookCollection = () => {
   const [globalState, globalActions] = useGlobal();
   const [state, setState] = useState({ queryText: "" });
   let library = globalState.personalLibrary;
 
-  const goToDetailPage = () => {
-    //go to Detail Page
-  };
-
   return (
-    <div class="collectionController">
+    <div className="collectionController">
       <input
-        class="searchBar"
+        className="searchBar"
         onChange={e => setState({ queryText: e.target.value })}
       />
       <ul>
@@ -25,16 +22,17 @@ const BookCollection = () => {
               book.description.indexOf(state.queryText) >= 0
           )
           .map(book => (
-            <li
-              key={book.id}
-              className="bookItem"
-              onClick={() => goToDetailPage()}
-            >
-              <h4>
-                {book.author} - {book.title}
-              </h4>
-              <p>{book.description.slice(0, 120) + "..."}</p>
-            </li>
+            <BookItem key={book.id} bookId={book.id} />
+            // <li
+            //   key={book.id}
+            //   className="bookItem"
+            //   onClick={() => goToDetailPage()}
+            // >
+            //   <h4>
+            //     {book.author} - {book.title}
+            //   </h4>
+            //   <p>{book.description.slice(0, 120) + "..."}</p>
+            // </li>
           ))}
       </ul>
     </div>
