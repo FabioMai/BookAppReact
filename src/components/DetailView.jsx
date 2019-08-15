@@ -13,7 +13,7 @@ const DetailView = props => {
   const addComment = () => {
     globalActions.addComment(
       document.querySelector(".addCommentInput").value,
-      props.id
+      props.bookId
     );
     document.querySelector(".addCommentInput").value = "";
   };
@@ -29,6 +29,7 @@ const DetailView = props => {
         <img
           className="bookCoverDetails"
           src={book.id === 0 ? BookCoverWatts : BookCoverSeneca}
+          alt="Book Cover"
           width="100"
         />
         <div>

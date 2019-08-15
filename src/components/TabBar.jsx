@@ -11,19 +11,24 @@ const TabBar = () => {
         <ul className="nav-items">
           <li className="library">
             <NavLink to="/library">
-              <img src={BookIcon} width="35" height="35" />
+              <img src={BookIcon} alt="Book Icon" width="35" height="35" />
               <span>Library</span>
             </NavLink>
           </li>
           <li className="browse">
             <NavLink to="/browse">
-              <img src={SearchIcon} width="35" height="35" />
+              <img src={SearchIcon} alt="Search Icon" width="35" height="35" />
               <span>Browse</span>
             </NavLink>
           </li>
           <li className="friends">
             <NavLink to="/friends">
-              <img src={FriendsIcon} width="35" height="35" />
+              <img
+                src={FriendsIcon}
+                alt="Friends Icon"
+                width="35"
+                height="35"
+              />
               <span>Friends</span>
             </NavLink>
           </li>

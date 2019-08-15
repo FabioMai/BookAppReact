@@ -5,20 +5,18 @@ import BookCoverSeneca from "../media/seneca.jpg";
 import BookCoverWatts from "../media/watts.jpg";
 
 const BookItem = props => {
-  const [globalState, globalActions] = useGlobal();
+  const [globalState] = useGlobal();
   const book = globalState.personalLibrary.filter(
     book => book.id === props.bookId
   )[0];
-  const goToDetailPage = () => {
-    //go to Detail Page
-  };
 
   return (
     <Link to={"/books/" + book.id}>
-      <li className="bookItem" onClick={() => goToDetailPage()}>
+      <li className="bookItem">
         <img
           className="bookCoverDetails"
           src={book.id === 0 ? BookCoverWatts : BookCoverSeneca}
+          alt="Book Cover"
           width="80"
         />
         <div className="textWrapper">

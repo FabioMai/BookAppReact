@@ -3,7 +3,7 @@ import useGlobal from "../store";
 import BookItem from "./BookItem";
 
 const BookCollection = () => {
-  const [globalState, globalActions] = useGlobal();
+  const [globalState] = useGlobal();
   const [state, setState] = useState({ queryText: "" });
   let library = globalState.personalLibrary;
 

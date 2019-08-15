@@ -3,7 +3,7 @@ import useGlobal from "../store";
 import BookItem from "./BookItem";
 
 const BrowseCollection = () => {
-  const [globalState, globalActions] = useGlobal();
+  const [globalState] = useGlobal();
   const [state, setState] = useState({ queryText: "" });
   let library = globalState.friendsLibrary;
 
@@ -23,10 +23,10 @@ const BrowseCollection = () => {
               book.description.indexOf(state.queryText) >= 0
           )
           .map(book => (
-            <>
+            <div key={book.id}>
               <h5>Josh added this to his library</h5>
-              <BookItem key={book.id} bookId={book.id} />
-            </>
+              <BookItem bookId={book.id} />
+            </div>
           ))}
       </ul>
     </div>

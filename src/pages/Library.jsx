@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import useGlobal from "../store";
 import BookCollection from "../components/BookCollection";
 
 const Library = () => {
-  const [globalState, globalActions] = useGlobal();
+  const [globalState] = useGlobal();
 
   return (
     <>
@@ -11,7 +11,6 @@ const Library = () => {
         Library ({globalState.personalLibrary.length})
       </h3>
       <br />
-      {/* <button onClick={onClickBtn}>Add book</button> */}
       <BookCollection />
     </>
   );
