@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import useGlobal from "../store";
 import BookItem from "./BookItem";
 
-const BookCollection = () => {
+const BrowseCollection = () => {
   const [globalState, globalActions] = useGlobal();
   const [state, setState] = useState({ queryText: "" });
-  let library = globalState.personalLibrary;
+  let library = globalState.friendsLibrary;
 
   return (
     <div className="collectionController">
       <input
         className="searchBar"
-        placeholder="Search your collection..."
+        placeholder="Search friends' collection..."
         onChange={e => setState({ queryText: e.target.value })}
       />
       <ul>
@@ -23,11 +23,14 @@ const BookCollection = () => {
               book.description.indexOf(state.queryText) >= 0
           )
           .map(book => (
-            <BookItem key={book.id} bookId={book.id} />
+            <>
+              <h5>Josh added this to his library</h5>
+              <BookItem key={book.id} bookId={book.id} />
+            </>
           ))}
       </ul>
     </div>
   );
 };
 
-export default BookCollection;
+export default BrowseCollection;

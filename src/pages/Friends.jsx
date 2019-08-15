@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const Friends = () => {
-    return <div>
-        <p>Friends page, hey.</p>        
-    </div>
-}
+  return (
+    <>
+      <h3 className="heading">Friends (38)</h3>
+      <div className="collectionController">
+        <br />
+        <input className="searchBar" placeholder="Search friends..." />
+      </div>
+    </>
+  );
+};
 
 export default Friends;

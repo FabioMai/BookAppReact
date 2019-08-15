@@ -14,7 +14,8 @@ function App() {
         <Switch>
           <Route exact strict path="/library" component={Library} />
           <Route
-            path="/details/:id"
+            exact
+            path="/books/:id"
             render={({ match }) => <Details id={match.params.id} />}
           />
           <Route exact strict path="/browse" component={Browse} />

@@ -1,9 +1,12 @@
 import React from "react";
+import BrowseCollection from "../components/BrowseCollection";
 
 const Browse = () => {
   return (
     <>
-      <ul />
+      <h3 className="heading">Browse</h3>
+      <br />
+      <BrowseCollection />
     </>
   );
 };
