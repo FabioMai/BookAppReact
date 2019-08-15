@@ -50,6 +50,15 @@
   color: white;
 }
 
+.smallWrapper {
+  text-align: center;
+}
+
+small {
+  display: inline-block;
+  font-size: 8px;
+}
+
 .bookItem {
   background-color: white;
   border-radius: 10px;

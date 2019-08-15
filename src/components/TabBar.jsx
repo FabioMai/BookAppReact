@@ -15,8 +15,8 @@ const TabBar = () => {
               <span>Library</span>
             </NavLink>
           </li>
-          <li className="browse active">
-            <NavLink to="/browse">
+          <li className="browse">
+            <NavLink to="/browse" className="active">
               <img src={SearchIcon} alt="Search Icon" width="35" height="35" />
               <span>Browse</span>
             </NavLink>
@@ -33,6 +33,9 @@ const TabBar = () => {
             </NavLink>
           </li>
         </ul>
+        <div className="smallWrapper">
+          <small>Icons by Clelia Colombo from the Noun Project</small>
+        </div>
       </nav>
     </footer>
   );
