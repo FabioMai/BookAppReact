@@ -12,6 +12,7 @@ function App() {
     <div className="app">
       <div className="app-content">
         <Switch>
+          <Route exact path="/" component={Browse} />
           <Route exact strict path="/library" component={Library} />
           <Route
             exact
