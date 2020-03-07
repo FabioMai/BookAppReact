@@ -1,5 +1,5 @@
 ### React Book App
-Learning React by creating a personal library app. Create your own book collection, add friends and see what your friends are reading (work in progress).
+Learning React by creating a personal library app. Create your own book collection, add friends and see what your friends are reading (work in progress). As it's meant as a PWA that is primarily mobile, responsiveness for the desktop version has yet to be implemented. Check it out on mobile or emulate a mobile viewport via the dev tools of your browser!
 
 Check out the demo: https://personal-library.netlify.com/
 
