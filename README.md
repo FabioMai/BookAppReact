@@ -1,3 +1,12 @@
+### React Book App
+Learning React by creating a personal library app. Create your own book collection, add friends and see what your friends are reading (work in progress).
+
+Check out the demo: https://personal-library.netlify.com/
+
+Hosted on Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7c8f3ad5-fb77-4cc9-9250-f455954717a3/deploy-status)](https://app.netlify.com/sites/personal-library/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
